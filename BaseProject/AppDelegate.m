@@ -10,6 +10,7 @@
 #import "AppDelegate+Category.h"
 #import "LeftViewController.h"
 #import "CSRNewsViewController.h"
+#import "WelcomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -20,7 +21,27 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [self initializeWithApplication:application];
-    self.window.rootViewController = self.sideMenu;
+    //self.window.rootViewController = self.sideMenu;
+    
+    NSDictionary *infoDic = [[NSBundle mainBundle]infoDictionary];
+    NSString *key = @"CFBundleShortVersionString";
+    NSString *currentVersion = infoDic[key];
+    //已运行过的版本号需要持久化处理，通常存储在userDefault中
+    NSString *runedVersion = [[NSUserDefaults standardUserDefaults] stringForKey:key];
+    if (runedVersion == nil || ![runedVersion isEqualToString:currentVersion])//如果没运行过，或版本号不一致，则显示欢迎页
+    {
+//        NSLog(@"显示欢迎页,window根视图设置为欢迎控制器对象");
+        WelcomeViewController *vc = [WelcomeViewController new];
+        self.window.rootViewController = vc;
+        //保存新的版本号，防止下次运行再显示欢迎页
+        [[NSUserDefaults standardUserDefaults] setValue:currentVersion forKey:key];
+        
+    }else
+    {
+        //NSLog(@"显示主页面，window根视图设置为主页面控制器对象");
+        self.window.rootViewController = self.sideMenu;
+   }
+    [self.window makeKeyAndVisible];
     //配置全局UI样式
     [self configGlobalUIStyle];
     return YES;

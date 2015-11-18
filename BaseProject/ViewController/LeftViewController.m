@@ -9,6 +9,7 @@
 #import "LeftViewController.h"
 #import "RankListViewController.h"
 #import "CSRNewsViewController.h"
+#import "ViewController.h"
 
 @interface LeftViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong)UITableView *tableView;
@@ -18,7 +19,7 @@
 @implementation LeftViewController
 - (NSArray *)itemNames
 {
-    return @[@"最新资讯", @"喜马拉雅", @"个人设置"];
+    return @[@"最新资讯", @"喜马拉雅", @"COSPlay"];
 }
 
 - (UITableView *)tableView {
@@ -57,7 +58,7 @@
     cell.accessoryType = 1;
     cell.textLabel.text = self.itemNames[indexPath.row];
     cell.backgroundColor = [UIColor clearColor];
-    cell.textLabel.textColor = kRGBColor(20, 218, 240);
+    cell.textLabel.textColor = kRGBColor(60, 218, 1000);
     return cell;
 }
 kRemoveCellSeparator
@@ -73,6 +74,10 @@ kRemoveCellSeparator
         case 1:
             [self.sideMenuViewController setContentViewController:[RankListViewController defaultNavi] animated:YES];
             [self.sideMenuViewController hideMenuViewController];
+        case 2:
+            [self.sideMenuViewController setContentViewController:[ViewController defaultNavi]];
+           [self.sideMenuViewController hideMenuViewController];
+            break;
         default:
 
             break;

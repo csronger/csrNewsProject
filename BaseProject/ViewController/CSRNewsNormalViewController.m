@@ -66,7 +66,7 @@
     _ic.delegate = self;
     _ic.dataSource = self;
     _ic.pagingEnabled = YES;
-    _ic.scrollSpeed = 1;
+    _ic.scrollSpeed = 0;
     
     _ic.type = 8;
     //如果只有一张图，不显示圆点

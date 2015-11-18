@@ -10,9 +10,4 @@
 
 @implementation BaseModel
 
-MJCodingImplementation
-+ (NSDictionary *)replacedKeyFromPropertyName{
-    return @{@"typeName": @"typename", @"ID": @"id", @"desc": @"description"};
-}
 @end
-
