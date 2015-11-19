@@ -10,6 +10,7 @@
 #import "RankListViewController.h"
 #import "CSRNewsViewController.h"
 #import "ViewController.h"
+#import "VideoViewController.h"
 
 @interface LeftViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong)UITableView *tableView;
@@ -19,7 +20,7 @@
 @implementation LeftViewController
 - (NSArray *)itemNames
 {
-    return @[@"最新资讯", @"喜马拉雅", @"COSPlay"];
+    return @[@"最新资讯", @"音乐榜", @"视频新闻",@"COSPlay"];
 }
 
 - (UITableView *)tableView {
@@ -75,7 +76,11 @@ kRemoveCellSeparator
             [self.sideMenuViewController setContentViewController:[RankListViewController defaultNavi] animated:YES];
             [self.sideMenuViewController hideMenuViewController];
         case 2:
-            [self.sideMenuViewController setContentViewController:[ViewController defaultNavi]];
+            [self.sideMenuViewController setContentViewController:[VideoViewController defaultNavi] animated:YES];
+            [self.sideMenuViewController hideMenuViewController];
+            break;
+        case 3:
+            [self.sideMenuViewController setContentViewController:[ViewController defaultNavi] animated:YES];
            [self.sideMenuViewController hideMenuViewController];
             break;
         default:

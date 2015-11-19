@@ -71,11 +71,20 @@
         {
             imageView.userInteractionEnabled = YES;
             [imageView addSubview:self.btn];
+            FBShimmeringView *shimmer = [FBShimmeringView new];
+            [imageView addSubview:shimmer];
+            [shimmer mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.bottom.mas_equalTo(-100);
+                make.size.mas_equalTo(CGSizeMake(140, 30));
+                make.centerX.mas_equalTo(0);
+            }];
             [_btn mas_makeConstraints:^(MASConstraintMaker *make) {
                 make.bottom.mas_equalTo(-100);
                 make.size.mas_equalTo(CGSizeMake(140, 30));
                 make.centerX.mas_equalTo(0);
             }];
+            shimmer.contentView = _btn;
+            shimmer.shimmering = YES;
         }
     }
     
