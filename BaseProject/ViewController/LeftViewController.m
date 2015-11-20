@@ -11,6 +11,7 @@
 #import "CSRNewsViewController.h"
 #import "ViewController.h"
 #import "VideoViewController.h"
+#import "DZViewController.h"
 
 @interface LeftViewController ()<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, strong)UITableView *tableView;
@@ -20,7 +21,7 @@
 @implementation LeftViewController
 - (NSArray *)itemNames
 {
-    return @[@"最新资讯", @"音乐榜", @"视频新闻",@"COSPlay"];
+    return @[@"最新资讯", @"音乐榜", @"视频新闻",@"COSPlay",@"搞笑段子"];
 }
 
 - (UITableView *)tableView {
@@ -82,6 +83,10 @@ kRemoveCellSeparator
         case 3:
             [self.sideMenuViewController setContentViewController:[ViewController defaultNavi] animated:YES];
            [self.sideMenuViewController hideMenuViewController];
+            break;
+        case 4:
+            [self.sideMenuViewController setContentViewController:[DZViewController defaultNavi] animated:YES];
+            [self.sideMenuViewController hideMenuViewController];
             break;
         default:
 

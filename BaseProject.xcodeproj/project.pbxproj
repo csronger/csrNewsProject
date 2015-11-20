@@ -103,6 +103,10 @@
 		859E4EDF1BF7053100C4C138 /* TRImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 859E4EDE1BF7053100C4C138 /* TRImageView.m */; };
 		859E4EE21BF705D300C4C138 /* CSRNewsNormalCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 859E4EE11BF705D300C4C138 /* CSRNewsNormalCell.m */; };
 		859E4EE51BF708D300C4C138 /* CSRNewsSlideImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 859E4EE41BF708D300C4C138 /* CSRNewsSlideImageCell.m */; };
+		85BD25D71BFECD6E0042BD8B /* DZViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BD25D61BFECD6E0042BD8B /* DZViewModel.m */; };
+		85BD25DA1BFED3A60042BD8B /* DZCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BD25D91BFED3A60042BD8B /* DZCell.m */; };
+		85BD25DD1BFED75D0042BD8B /* DZContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BD25DC1BFED75D0042BD8B /* DZContentCell.m */; };
+		85BD25E01BFEE1A20042BD8B /* DZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85BD25DF1BFEE1A20042BD8B /* DZViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -274,6 +278,14 @@
 		859E4EE11BF705D300C4C138 /* CSRNewsNormalCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSRNewsNormalCell.m; sourceTree = "<group>"; };
 		859E4EE31BF708D300C4C138 /* CSRNewsSlideImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSRNewsSlideImageCell.h; sourceTree = "<group>"; };
 		859E4EE41BF708D300C4C138 /* CSRNewsSlideImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSRNewsSlideImageCell.m; sourceTree = "<group>"; };
+		85BD25D51BFECD6E0042BD8B /* DZViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZViewModel.h; sourceTree = "<group>"; };
+		85BD25D61BFECD6E0042BD8B /* DZViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZViewModel.m; sourceTree = "<group>"; };
+		85BD25D81BFED3A60042BD8B /* DZCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZCell.h; sourceTree = "<group>"; };
+		85BD25D91BFED3A60042BD8B /* DZCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZCell.m; sourceTree = "<group>"; };
+		85BD25DB1BFED75D0042BD8B /* DZContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZContentCell.h; sourceTree = "<group>"; };
+		85BD25DC1BFED75D0042BD8B /* DZContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZContentCell.m; sourceTree = "<group>"; };
+		85BD25DE1BFEE1A20042BD8B /* DZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZViewController.h; sourceTree = "<group>"; };
+		85BD25DF1BFEE1A20042BD8B /* DZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZViewController.m; sourceTree = "<group>"; };
 		85D237111BF96E7F0031CFDF /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		85D237131BF970490031CFDF /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		DD4F0750B5DAAA87BA236B31 /* Pods-BaseProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BaseProject.release.xcconfig"; path = "Pods/Target Support Files/Pods-BaseProject/Pods-BaseProject.release.xcconfig"; sourceTree = "<group>"; };
@@ -668,6 +680,8 @@
 				859E4EDB1BF6E7D900C4C138 /* CSRNewsNormalViewController.m */,
 				8580BE6B1BF7266D002D4B6B /* CSRNewsHtmlViewController.h */,
 				8580BE6C1BF7266D002D4B6B /* CSRNewsHtmlViewController.m */,
+				85BD25DE1BFEE1A20042BD8B /* DZViewController.h */,
+				85BD25DF1BFEE1A20042BD8B /* DZViewController.m */,
 			);
 			name = "新闻";
 			sourceTree = "<group>";
@@ -754,6 +768,10 @@
 				859E4EE11BF705D300C4C138 /* CSRNewsNormalCell.m */,
 				859E4EE31BF708D300C4C138 /* CSRNewsSlideImageCell.h */,
 				859E4EE41BF708D300C4C138 /* CSRNewsSlideImageCell.m */,
+				85BD25D81BFED3A60042BD8B /* DZCell.h */,
+				85BD25D91BFED3A60042BD8B /* DZCell.m */,
+				85BD25DB1BFED75D0042BD8B /* DZContentCell.h */,
+				85BD25DC1BFED75D0042BD8B /* DZContentCell.m */,
 			);
 			name = "新闻";
 			sourceTree = "<group>";
@@ -763,6 +781,8 @@
 			children = (
 				859E4ED71BF6E33000C4C138 /* CSRNewsViewModel.h */,
 				859E4ED81BF6E33000C4C138 /* CSRNewsViewModel.m */,
+				85BD25D51BFECD6E0042BD8B /* DZViewModel.h */,
+				85BD25D61BFECD6E0042BD8B /* DZViewModel.m */,
 			);
 			name = "新闻";
 			sourceTree = "<group>";
@@ -959,6 +979,7 @@
 				850712801BF61D3300C02678 /* WMMenuItem.m in Sources */,
 				8500A4A61BFC2C57002E96F5 /* XiMaAlbumViewModel.m in Sources */,
 				859E4ED91BF6E33000C4C138 /* CSRNewsViewModel.m in Sources */,
+				85BD25DD1BFED75D0042BD8B /* DZContentCell.m in Sources */,
 				3885C8F91BE8E96A009441EA /* PSCollectionView.m in Sources */,
 				850712821BF61D3300C02678 /* WMProgressView.m in Sources */,
 				850712881BF620BC00C02678 /* Factory.m in Sources */,
@@ -967,6 +988,7 @@
 				859E4EE21BF705D300C4C138 /* CSRNewsNormalCell.m in Sources */,
 				850712811BF61D3300C02678 /* WMMenuView.m in Sources */,
 				8500A48C1BFC2C0B002E96F5 /* AlbumModel.m in Sources */,
+				85BD25D71BFECD6E0042BD8B /* DZViewModel.m in Sources */,
 				3886C09B1BD748830014E661 /* AppDelegate.m in Sources */,
 				3885C8981BE8E88D009441EA /* iCarousel.m in Sources */,
 				856D95B61BFC74A80016C6E6 /* BaseModel.m in Sources */,
@@ -974,11 +996,13 @@
 				859E4EDF1BF7053100C4C138 /* TRImageView.m in Sources */,
 				3886C0BB1BD74AE90014E661 /* BaseViewModel.m in Sources */,
 				8507127F1BF61D3300C02678 /* WMFooldView.m in Sources */,
+				85BD25DA1BFED3A60042BD8B /* DZCell.m in Sources */,
 				853F15061BFDAA3B006D0337 /* VideoViewModel.m in Sources */,
 				8500A49F1BFC2C4C002E96F5 /* MusicListViewController.m in Sources */,
 				8500A4A01BFC2C4C002E96F5 /* RankListViewController.m in Sources */,
 				8580BE6D1BF7266D002D4B6B /* CSRNewsHtmlViewController.m in Sources */,
 				3885C8FB1BE8E96A009441EA /* README.md in Sources */,
+				85BD25E01BFEE1A20042BD8B /* DZViewController.m in Sources */,
 				8500A4901BFC2C1E002E96F5 /* XiMaNetManager.m in Sources */,
 				850712561BF6147000C02678 /* LeftViewController.m in Sources */,
 				853F14FD1BFDAA01006D0337 /* VideoModel.m in Sources */,

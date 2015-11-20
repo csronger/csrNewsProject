@@ -8,6 +8,7 @@
 
 #import "BaseNetManager.h"
 #import "CSRNewsModel.h"
+#import "CSRNewsTypeModel.h"
 
 typedef NS_ENUM(NSUInteger, InfoType)
 {
@@ -17,9 +18,8 @@ typedef NS_ENUM(NSUInteger, InfoType)
     InfoTypeKeJi,//科技
     InfoTypeWenHua,//文化
     InfoTypeDuanZi,//段子
-    InfoTypeMeiNv,//美女
 };
 
 @interface CSRNewsNetManager : BaseNetManager
-+ (id)getNewsInfoWithType:(InfoType)type kCompletionHandle;
++ (id)getNewsInfoWithType:(InfoType)type  page:(NSInteger)pageID kCompletionHandle;
 @end

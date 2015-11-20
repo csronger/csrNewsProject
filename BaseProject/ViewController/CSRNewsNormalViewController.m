@@ -98,7 +98,7 @@
     [self.tableView registerClass:[CSRNewsNormalCell class] forCellReuseIdentifier:@"NormalCell"];
     [self.tableView registerClass:[CSRNewsSlideImageCell class] forCellReuseIdentifier:@"ImageCell"];
     self.tableView.header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
-        [self.newsVM getDataFromNetCompleteHandle:^(NSError *error) {
+        [self.newsVM refreshDataCompletionHandle:^(NSError *error) {
             self.tableView.tableHeaderView = [self headView];
             [self.tableView.header endRefreshing];
             [self.tableView reloadData];

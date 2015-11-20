@@ -47,7 +47,11 @@
 
 - (void)getDataFromNetCompleteHandle:(CompletionHandle)completionHandle
 {
-    self.dataTask = [CSRNewsNetManager getNewsInfoWithType:self.type completionHandle:^(NSArray *model, NSError *error) {
+    self.dataTask = [CSRNewsNetManager getNewsInfoWithType:self.type page:_pageID  completionHandle:^(NSArray *model, NSError *error) {
+        if (_pageID == 1)
+        {
+            [self.dataArr removeAllObjects];
+        }
         CSRNewsModel *model1 = model.firstObject;
         CSRNewsModel *model2 = model.lastObject;
         [self.dataArr addObjectsFromArray:model1.item];
@@ -63,8 +67,14 @@
         completionHandle(error);
     }];
 }
+- (void)refreshDataCompletionHandle:(CompletionHandle)completionHandle
+{
+    _pageID = 1;
+    [self getDataFromNetCompleteHandle:completionHandle];
+}
 - (void)getMoreDataCompletionHandle:(CompletionHandle)completionHandle
 {
+    _pageID += 1;
     [self getDataFromNetCompleteHandle:completionHandle];
 }
 

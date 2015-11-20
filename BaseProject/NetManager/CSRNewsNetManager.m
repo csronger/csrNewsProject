@@ -9,6 +9,7 @@
 #import "CSRNewsNetManager.h"
 
 #define kNewsPath @"http://api.iclient.ifeng.com/ClientNews"
+#define kDuanziPath @"http://api.3g.ifeng.com/clientShortNews"
 #define kGv       @"gv":@"4.6.5"
 #define kAv       @"av":@0
 #define kProid    @"proid":@"ifengnews"
@@ -23,9 +24,9 @@
 
 @implementation CSRNewsNetManager
 
-+ (id)getNewsInfoWithType:(InfoType)type kCompletionHandle
++ (id)getNewsInfoWithType:(InfoType)type page:(NSInteger)pageID kCompletionHandle
 {
-    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{kGv, kAv, kProid, kOS, kVt, kScreen, kPublishid, kUid}];
+    NSMutableDictionary *params = [NSMutableDictionary dictionaryWithDictionary:@{kGv, kAv, kProid, kOS, kVt, kScreen, kPublishid, kUid, @"page":@(pageID)}];
     switch (type) {
         case InfoTypeTouTiao: {
             kSetId(@"SYLB10,SYDT10,SYRECOMMEND", params)
@@ -48,17 +49,20 @@
             break;
         }
         case InfoTypeDuanZi: {
-    
-            break;
-        }
-        case InfoTypeMeiNv: {
-        
+           // NSLog(@"duanzi");
+            kSetType(@"joke", params)
             break;
         }
         default: {
             NSAssert1(NO, @"%s:type类型不正确", __func__);
             break;
         }
+    }
+    if (type == InfoTypeDuanZi)
+    {
+        return [self GET:kDuanziPath parameters:params completionHandler:^(id responseObj, NSError *error) {
+            completionHandle([CSRNewsTypeModel objectWithKeyValues:responseObj], error);
+        }];
     }
     return [self GET:kNewsPath parameters:params completionHandler:^(id responseObj, NSError *error) {
         completionHandle([CSRNewsModel objectArrayWithKeyValuesArray:responseObj], error);

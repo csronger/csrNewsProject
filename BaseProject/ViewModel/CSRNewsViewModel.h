@@ -47,5 +47,5 @@
 
 @property (nonatomic, strong)NSMutableArray *normalArr;
 
-
+@property (nonatomic, assign)NSInteger pageID;
 @end
