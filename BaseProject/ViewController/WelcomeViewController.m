@@ -24,7 +24,7 @@
         _btn.shadowHeight = 3.0f;
         _btn.cornerRadius = 6.0f;
         _btn.shadowColor = [UIColor greenSeaColor];
-        _btn.buttonColor = [UIColor turquoiseColor];
+        _btn.buttonColor = [UIColor greenSeaColor];
         [_btn setTitle:@"点击进入" forState:0];
         _btn.titleLabel.font = [UIFont boldFlatFontOfSize:16];
         [_btn setTitleColor:[UIColor cloudsColor] forState:0];
@@ -73,13 +73,14 @@
             [imageView addSubview:self.btn];
             FBShimmeringView *shimmer = [FBShimmeringView new];
             [imageView addSubview:shimmer];
+            //shimmer.backgroundColor = [UIColor blueColor];
             [shimmer mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.bottom.mas_equalTo(-100);
+                make.bottom.mas_equalTo(-70);
                 make.size.mas_equalTo(CGSizeMake(140, 30));
                 make.centerX.mas_equalTo(0);
             }];
             [_btn mas_makeConstraints:^(MASConstraintMaker *make) {
-                make.bottom.mas_equalTo(-100);
+                make.bottom.mas_equalTo(-70);
                 make.size.mas_equalTo(CGSizeMake(140, 30));
                 make.centerX.mas_equalTo(0);
             }];
